@@ -1,10 +1,10 @@
-# Milenium Landscaping Inc.
+# Millennium Landscaping Inc.
 
-Welcome to Milenium Landscaping Inc.! We are a professional landscaping company dedicated to providing high-quality services for both commercial and residential properties. Our team specializes in creating beautiful and functional outdoor spaces that enhance the beauty and value of your property.
+Welcome to Millennium Landscaping Inc.! We are a professional landscaping company dedicated to providing high-quality services for both commercial and residential properties. Our team specializes in creating beautiful and functional outdoor spaces that enhance the beauty and value of your property.
 
 ## About Us
 
-At Milenium Landscaping Inc., we believe in delivering exceptional results through expertise, creativity, and dedication. With years of experience in the landscaping industry, our team is committed to exceeding our clients' expectations by providing personalized solutions tailored to their unique needs.
+At Millennium Landscaping Inc., we believe in delivering exceptional results through expertise, creativity, and dedication. With years of experience in the landscaping industry, our team is committed to exceeding our clients' expectations by providing personalized solutions tailored to their unique needs.
 
 ## Services
 

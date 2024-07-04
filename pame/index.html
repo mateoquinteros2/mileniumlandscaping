@@ -11,6 +11,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+	
+	
+			@keyframes pulse {
+				0% {
+					transform: scale(1);
+					box-shadow: 0 0 5px #1e252d;
+				}
+				50% {
+					transform: scale(1.05);
+					box-shadow: 0 0 20px #1e252d;
+				}
+				100% {
+					transform: scale(1);
+					box-shadow: 0 0 5px #1e252d;
+				}
+			}
+	
+			.actions.special .button {
+				animation: pulse 2s infinite;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		

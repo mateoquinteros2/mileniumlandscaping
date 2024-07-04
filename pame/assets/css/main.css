@@ -123,7 +123,21 @@ footer, header, hgroup, menu, nav, section {
 
 	.carousel-image.active {
 		display: block;
+		filter: blur(0.3px);
+		animation: zoom-in-zoom-out 12s ease infinite;
 	}
+
+	@keyframes zoom-in-zoom-out {
+		0% {
+		  transform: scale(1, 1);
+		}
+		50% {
+		  transform: scale(1.1, 1.1);
+		}
+		100% {
+		  transform: scale(1, 1);
+		}
+	  }
 
 	.video-container {
 		position: relative;

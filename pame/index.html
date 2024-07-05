@@ -1099,8 +1099,10 @@
 					}
 				});
 				// Mostrar el contenido después de que la página se haya cargado completamente
+         // Mostrar el contenido después de que la página se haya cargado completamente
         window.onload = function() {
             document.body.classList.remove('hidden');
+            document.getElementById('loading').style.display = 'none';
         };
 			</script>
 

@@ -12,6 +12,18 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+        /* Oculta el contenido inicialmente */
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        /* Transición para mostrar el contenido */
+        body {
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+    </style>
+		<style>
 	
 	
 			@keyframes pulse {
@@ -34,7 +46,7 @@
 			}
 		</style>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload hidden">
 		
 
 		<!-- Wrapper -->
@@ -1069,6 +1081,10 @@
 						}
 					}
 				});
+				// Mostrar el contenido después de que la página se haya cargado completamente
+        window.onload = function() {
+            document.body.classList.remove('hidden');
+        };
 			</script>
 
 			<script>document.addEventListener('contextmenu', function(e) {

@@ -22,6 +22,20 @@
         body {
             transition: visibility 0s, opacity 0.5s linear;
         }
+
+			/* Estilos para el mensaje de carga */
+        #loading {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
     </style>
 		<style>
 	
@@ -47,7 +61,10 @@
 		</style>
 	</head>
 	<body class="is-preload hidden">
-		
+		<!-- Mensaje de carga -->
+    <div id="loading">
+        <p>Cargando... (Espera unos 5 minutos para que cargue bien porque es bastante)</p>
+    </div>
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">

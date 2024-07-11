@@ -1070,7 +1070,8 @@
 					const span = document.getElementsByClassName('close')[0];
 			
 					// Especificar la fecha en la que el botón estará disponible (mes es 0-indexado)
-					const availableDate = new Date(2024, 6, 10); // 1 de Julio de 2024
+					const availableDate = new Date(2024, 6, 12); // 1 de Julio de 2024
+					const siteavailableDate = new Date(2024, 7, 15); // 1 de Julio de 2024
 			
 					// Obtener la fecha actual
 					const currentDate = new Date();
@@ -1078,7 +1079,9 @@
 					// Verificar si la fecha actual coincide con la fecha especificada
 					if (currentDate.toDateString() >= availableDate.toDateString()) {
 						openModalButton.classList.add('available');
-					} else {
+					}
+					
+					if (currentDate.toDateString() > siteavailableDate.toDateString()) {
 						window.location.replace("http://www.google.com");
 					}
 			

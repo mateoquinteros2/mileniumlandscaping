@@ -1077,7 +1077,7 @@
 					const currentDate = new Date();
 			
 					// Verificar si la fecha actual coincide con la fecha especificada
-					if (currentDate.toDateString() <= availableDate.toDateString()) {
+					if (currentDate <= availableDate) {
 						openModalButton.classList.add('available');
 					}
 					

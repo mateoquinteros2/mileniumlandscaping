@@ -214,7 +214,6 @@
 							Todo lo que acabo de decir en este cuadro en blanco que estas leyendo, no tiene nada que ver con lo demás. Cerrá este 
 							mesaje y seguí bajando en la foto. Ojalá de guste y gracias por leer todo esto, lo hago con las mejores intenciones.
 						</p>
-						<button id="closeAndRedirect">Cerrar y ver regalo</button>
 					</div>
 				</div>
 				
@@ -1133,15 +1132,6 @@
 					const modal = document.getElementById('myModal');
 					const span = document.getElementsByClassName('close')[0];
 
-					var closeAndRedirectBtn = document.getElementById("closeAndRedirect");
-				
-				    // Cerrar el modal y redirigir al div
-				    closeAndRedirectBtn.onclick = function() {
-				        modal.style.display = "none";
-				        document.getElementById("intro").scrollIntoView({ behavior: 'smooth' });
-					    setTimeout(function() {
-				            launchConfetti();
-				        }, 1000); }
 			
 					// Especificar la fecha en la que el botón estará disponible (mes es 0-indexado)
 					const availableDate = new Date(2024, 8, 12); // 1 de Julio de 2024
@@ -1176,26 +1166,6 @@
 							modal.style.display = 'none';
 						}
 					}
-					// Función para lanzar confeti
-    function launchConfetti() {
-        const confettiContainer = document.getElementById("confetti-container");
-        confettiContainer.innerHTML = ''; // Clear any existing confetti
-
-        for (let i = 0; i < 100; i++) {
-            const confetti = document.createElement("div");
-            confetti.classList.add("confetti");
-            confetti.style.left = `${Math.random() * 100}%`;
-            confetti.style.backgroundColor = getRandomColor();
-            confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
-            confettiContainer.appendChild(confetti);
-        }
-    }
-
-    // Función para obtener un color aleatorio
-    function getRandomColor() {
-        const colors = ["#ff0a54", "#ff477e", "#ff85a1", "#fbb1bd", "#f9bec7", "#f7cad0", "#ff7096"];
-        return colors[Math.floor(Math.random() * colors.length)];
-    }
 				});
 				// Mostrar el contenido después de que la página se haya cargado completamente
          // Mostrar el contenido después de que la página se haya cargado completamente

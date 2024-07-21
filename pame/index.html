@@ -38,69 +38,6 @@
         }
     </style>
 		<style>
-			/* Estilo del modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Estilo para el contenedor de confeti */
-#confetti-container {
-    position: relative;
-    width: 100%;
-    height: 100px;
-}
-
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    opacity: 0;
-    animation: confetti-fall linear forwards;
-}
-
-@keyframes confetti-fall {
-    0% {
-        transform: translateY(-100vh);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-}
-
 	
 	
 			@keyframes pulse {
@@ -1131,7 +1068,6 @@
 					const openModalButton = document.getElementById('openModalButton');
 					const modal = document.getElementById('myModal');
 					const span = document.getElementsByClassName('close')[0];
-
 			
 					// Especificar la fecha en la que el botón estará disponible (mes es 0-indexado)
 					const availableDate = new Date(2024, 8, 12); // 1 de Julio de 2024

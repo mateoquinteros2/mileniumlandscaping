@@ -38,6 +38,69 @@
         }
     </style>
 		<style>
+			/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para el contenedor de confeti */
+#confetti-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0;
+    animation: confetti-fall linear forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
 	
 	
 			@keyframes pulse {
@@ -151,6 +214,7 @@
 							Todo lo que acabo de decir en este cuadro en blanco que estas leyendo, no tiene nada que ver con lo demás. Cerrá este 
 							mesaje y seguí bajando en la foto. Ojalá de guste y gracias por leer todo esto, lo hago con las mejores intenciones.
 						</p>
+						<button id="closeAndRedirect">Cerrar y ver</button>
 					</div>
 				</div>
 				
@@ -1063,6 +1127,43 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+				    var modal = document.getElementById("myModal");
+				    var closeAndRedirectBtn = document.getElementById("closeAndRedirect");
+				
+				    // Cerrar el modal y redirigir al div
+				    closeAndRedirectBtn.onclick = function() {
+				        modal.style.display = "none";
+				        document.getElementById("intro").scrollIntoView({ behavior: 'smooth' });
+					    setTimeout(function() {
+            launchConfetti();
+        }, 1000); // Delay to allow scroll to complete
+				    }
+
+					// Función para lanzar confeti
+    function launchConfetti() {
+        const confettiContainer = document.getElementById("confetti-container");
+        confettiContainer.innerHTML = ''; // Clear any existing confetti
+
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.backgroundColor = getRandomColor();
+            confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            confettiContainer.appendChild(confetti);
+        }
+    }
+
+    // Función para obtener un color aleatorio
+    function getRandomColor() {
+        const colors = ["#ff0a54", "#ff477e", "#ff85a1", "#fbb1bd", "#f9bec7", "#f7cad0", "#ff7096"];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+				
+				});
+			</script>
 			<script>
 				document.addEventListener('DOMContentLoaded', function() {
 					const openModalButton = document.getElementById('openModalButton');
